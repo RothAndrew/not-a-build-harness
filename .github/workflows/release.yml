@@ -1,4 +1,4 @@
-name: Build and publish the image on new tag creation
+name: "Release: Build and push the image on new tag creation"
 
 on:
   push:
@@ -10,7 +10,7 @@ env:
   IMAGE_NAME: ${{ github.repository }}/not-a-build-harness
 
 jobs:
-  build-agent:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
